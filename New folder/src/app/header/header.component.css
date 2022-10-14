@@ -1,0 +1,33 @@
+.headers {
+    margin-left: 34px;
+    
+    position: relative;
+    display: flex;
+    height: 45px;
+
+        }
+.links {
+    text-decoration: none;
+    color:rgb(94, 94, 94);
+    position:relative;
+    float:right;
+;    left:86%;
+top:19px;
+font-size: medium;
+}
+.links:hover {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+
+}
+.section{
+    background-color: rgb(46, 119, 255);
+    position: relative;
+    display: flex;
+    height: 65px;
+
+}
+.logo{
+    height:75px;
+    margin-bottom:4px;
+}

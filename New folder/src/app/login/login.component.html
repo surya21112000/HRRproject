@@ -1,0 +1,97 @@
+<div id="bg"></div> 
+<header>
+  <div class="section" style="background:transparent;">
+  <div class="headers">
+      <img src="https://i.ibb.co/LJFsCvW/Logo-new-removebg-preview.png" alt="s" class="logo">
+  </div>
+  <!-- <a href="" class="links">logout</a> -->
+</div>
+</header> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Market Intellect</title>
+
+</head>
+<body >
+
+<section *ngIf="isLoginMode">
+  <img src="https://merkatintellekt.com/wp-content/uploads/2022/08/Logo.new_.jpg" alt="" class="sss">
+<form name="myForm" [formGroup]="LoginForm" >
+<div class="form-field">
+<input type="email"
+ name="email"
+ required
+  email
+  placeholder="Email"
+  formControlName="email">
+
+</div>
+<div>
+
+   </div>
+<div class="form-field">
+<input type="password"  name ="password" placeholder="Password"  required  formControlName="password" /> </div>
+<div>
+
+
+   </div><div>
+
+    <div class="form-field">
+    <a href=""><button class="btn" type ="submit"  (click)="onLogin()">Login</button></a>
+        <a href=""><button class="butn" type ="submit" (click)="onSwitchMode()" >Signup</button></a>
+    </div></div>
+
+
+
+
+
+    <!-- <p *ngIf="emp.options[emp.selectedIndex].text=='Employee'">Employee Account is Selected</p></div> -->
+</form></section>
+<section  *ngIf="!isLoginMode">
+  <form name="myForm" [formGroup]="postForm" >
+    <div class="form-field">
+    <input type="email"
+
+     name="email"
+     required
+
+      placeholder="Email"
+      formControlName="email">
+
+    </div>
+
+    <div class="form-field">
+    <input type="password"  name ="password" placeholder="Password"  required    formControlName="password"/> </div>
+<div *ngIf="!choice">
+      <div class="form-field">
+        <input type="text"  name ="firstname" placeholder="Firstname"  required    formControlName="firstname"/> </div>
+             <div class="form-field">
+            <input type="text"  name ="firstname" placeholder="Secondname"  required    formControlName="lastname"/> </div>
+       
+</div>
+
+     
+
+      <div *ngFor="let pos of accounts" class="s">
+        
+        <input type="radio" style="background-color: transparent;"  value ="{{pos}}"name="s" id="" (change)="myfun($event)">{{pos}}
+      </div><br>
+
+          <a href=""><button class="butn" type ="submit" (click)="onSignUp()" >Register</button></a>
+ 
+
+        
+
+
+</form>
+</section>
+
+</body>
+<footer style="width: 1353px; background-color: rgb(246, 250, 250);">
+<p style="text-align:center; font-size: larger;">	&#169; Market Intellect  2016</p>
+</footer>
+</html>
+

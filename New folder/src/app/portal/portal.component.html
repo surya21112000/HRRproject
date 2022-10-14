@@ -1,0 +1,49 @@
+<app-header></app-header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+
+
+</head>
+<body>
+  <div class="container">
+ <app-nav></app-nav>
+
+
+    <section class="main">
+      <div class="main-top">
+        <h1>Attendance</h1>
+        <i class="fas fa-user-cog"></i>
+      </div>
+      <div class="users">
+        <div class="card" *ngFor="let pos of post">
+          <img src="./pic/img1.jpg">
+          <h4>{{pos.firstname  + ' '+ pos.secondname}}</h4>
+          <p>{{pos.designation}}</p>
+          <div class="per">
+            <table>
+              <tr>
+                <td><span>76%</span></td>
+                <td><span>{{pos.salary}}</span></td>
+              </tr>
+              <tr>
+                <td>Attendance</td>
+                <td>Salary</td>
+              </tr>
+            </table>
+          </div>
+          <button>Profile</button>
+        </div>
+</div>
+
+
+
+     
+    </section>
+  </div>
+
+</body>
+</html>
+<router-outlet></router-outlet>
